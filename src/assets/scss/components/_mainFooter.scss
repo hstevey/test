@@ -1,0 +1,18 @@
+.mainFooter{
+    background-color: $mainSecondaryColor;
+    padding: rem-calc(24 24 0 24);
+    .sectionOne{
+        height: 400px;
+        .mainFooterContent{
+            margin-bottom: $marginSpace;
+            h2,h3{
+                color: $mainPrimaryColor;
+            }
+        }
+    }
+    .credits{
+        height: rem-calc(40);
+        background-color: red;
+        text-align: center;
+    }
+}

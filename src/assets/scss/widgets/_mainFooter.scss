@@ -1,0 +1,30 @@
+.mainFooter{
+    background-color:#f7f7f7;
+    height: 100px;
+    padding-top: 2rem;
+    @include breakpoint (medium down){
+        height: 150px;
+      }
+    .socialMedia{
+        margin:0;
+        display: inline-block;
+    }
+    p{
+        display: inline;
+        margin-left: 2rem;
+        @include breakpoint(medium down) {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+    img{
+        height: 50px;
+        float: right;
+
+    }
+    .footerLogo{
+        height: 50px;
+        width: 50px;
+        float: right;
+    }
+}

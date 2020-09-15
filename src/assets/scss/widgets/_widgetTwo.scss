@@ -1,0 +1,19 @@
+.widgetTwo{
+    height: 100vh;
+    background-color: #f2f2f2;
+    .widgetTwoContent{
+        margin-top: $marginTop;
+        height: 900px;
+        h1{
+            color: $mainSecondaryColor;
+        }
+    }
+    .widgetTwoModule{
+        display: inline;
+    }
+}
+
+.widgetTwo1{
+    background-color: red;
+    height: 100vh;
+}

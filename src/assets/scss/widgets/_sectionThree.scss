@@ -1,0 +1,16 @@
+#sectionThree{
+    margin-bottom: 5rem;
+    .marginAll{
+        margin-bottom: 10rem;
+    }
+    .sectionContent{
+        margin-bottom: 6.5rem;
+        width: auto!important;
+    }
+    a{
+        font-weight: bold;
+        &.ZorgPartner{
+            font-size: 1.2rem;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.sectionOne{
+    padding-top: rem-calc(105);
+    @include breakpoint(medium up){
+        height: 100vh;
+    }
+    .sectionOneContent{
+        .sectionOneSmallP{
+            display: inline-block;
+            &.pp{
+                font-size: 12px;
+                color: #a2a2a2;
+                text-decoration: underline;
+                margin-left: 0.5rem;
+                @include breakpoint(small down) {
+                    display: inline-block;
+                    margin: 0;
+                }
+            }
+        }
+        .sectionOneTitle{
+            @extend h1;
+            font-size: rem-calc(72);
+            line-height: rem-calc(93);
+            margin-bottom: 2rem;
+            @include breakpoint(medium down) {
+                font-size: rem-calc(50);
+                line-height: normal;
+            }
+        }
+        .sectionOneText{
+            @extend h3;
+            color: #a2a2a2;
+            width: rem-calc(535);
+            line-height: 2rem;
+            margin: 3rem 0 3rem 0;
+            @include breakpoint(medium down) {
+                margin: auto;
+                width: auto;
+                margin-bottom: 2rem;
+            }
+
+        }
+    }
+    .autoTyper{
+        display: none;
+    }
+   .button{
+       margin-right: 2rem;
+       &.secondary{
+           background-color: #f7f7f7;
+           &:hover{
+               color: black;
+               background-color: scale-color(#f7f7f7, $lightness: -15%);
+           }
+       }
+   }
+}

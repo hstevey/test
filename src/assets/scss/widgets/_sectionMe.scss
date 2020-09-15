@@ -1,0 +1,36 @@
+
+#sectionMe {
+    padding-top: 2rem;
+    .sectionMeH2 {
+        margin-bottom: 2rem;
+    }
+    .sectionMePart {
+        margin: 2.5rem 0rem 5rem 0rem;
+    }
+    .autoTyper {
+        height: 5rem;
+        margin-bottom: 1rem;
+    }
+    #typed {
+        @extend h3;
+        font-weight: bold;
+        
+    }
+    a {
+        margin-right: 1rem;
+    }
+    .blockyContent{
+        text-align: center;
+        .blockyEmoji{
+            font-size: 40px;
+            display: inline-block;
+            margin:0rem 1rem 0rem 0rem;
+        }
+        .blockyTitle{
+            @extend h4;
+            display: inline-block;
+        }
+        .blockyText{
+        }
+    }
+}

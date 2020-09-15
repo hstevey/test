@@ -1,0 +1,76 @@
+.widgetOneHero{
+    padding-top: 5rem;
+    height:100vh;
+    .autoTyper{
+        height: rem-calc(250);
+        @include breakpoint (medium down) {
+            height: rem-calc(150);
+        }
+        #typed{
+            color: $mainSecondaryColor;
+            font-size: rem-calc(80);
+            font-weight: bold;
+            @include breakpoint (medium down) {
+                font-size: rem-calc(40);
+            }
+        }
+    }
+    p{
+        &.subtitle{
+            @extend h3;
+            color:$mainBlack!important;
+            font-size: rem-calc(28);
+            .subtitleName{
+                color: $mainSecondaryColor;
+            }
+        }
+        &.widgetOneText{
+            color:#b2b2b2; //nts: new color pallet//
+            font-size: rem-calc(18);
+            width: rem-calc(530);
+            margin-bottom: $marginTop;
+        }
+    }
+    a{
+        @include primaryButton;
+    }
+.ityped-cursor {
+    font-size: 2.2rem;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes blink {
+    100% {
+        opacity: 0;
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+  }
+  
+  @-moz-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+  }
+}
+.widgetOneBG{
+    position: relative;
+    left: 0px;
+    svg{
+        position: absolute;
+    }
+    z-index: -1;
+}
+
+.secondaryNavigation{
+    position: fixed;
+    top:40%;
+}

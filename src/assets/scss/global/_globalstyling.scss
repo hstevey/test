@@ -1,0 +1,212 @@
+$marginSpace: 2rem;
+$marginTop: $marginSpace;
+$redred: #ff9d9d;
+$blueblue: #b1d8f9;
+
+$list1: $blueblue, $redred;
+
+@mixin gradient($direction, $list) {
+    background: -webkit-linear-gradient($direction, $list);
+    background: -moz-linear-gradient($direction, $list);
+    background: -o-linear-gradient($direction, $list);
+    background: linear-gradient($direction, $list);
+}
+
+@mixin primaryButton {
+    width: 150px;
+}
+
+//SmallP
+.sectionOneSmallP{
+    font-size: rem-calc(15);
+    margin-bottom: 0!important;
+}
+
+//SectionContent
+.sectionContent{
+    margin-bottom: 6.5rem;
+    .sectionText{
+        line-height: 2.5rem;
+    }
+}
+
+h2{
+    margin-bottom: 3rem !important;
+}
+
+
+//Mainstream text cta
+.linkref {
+    font-size: rem-calc(35);
+    font-weight: 500;
+    color: black;
+    
+    &:hover {
+        text-decoration: underline;
+        @include gradient(to left, $list1);
+        color: white;
+        border-radius: 3.5px;
+    }
+    &:hover::before {
+        content: "";
+        width: 65px;
+        border-top: solid 2px white;
+        position: relative;
+        left: 0;
+        z-index: 4;
+        display: inline-block;
+        top: -11px;
+        margin-right: 1rem;
+    }
+    &::before {
+        content: "";
+        width: 65px;
+        border-top: solid 2px #000;
+        position: relative;
+        left: 0;
+        z-index: -1;
+        display: inline-block;
+        top: -11px;
+        margin-right: 1rem;
+    }
+    &::after {
+        content: "\f054";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        display: inline-block;
+        margin-left: rem-calc(5);
+    }
+    @include breakpoint (medium down) {
+        font-size: rem-calc(25);
+    }
+}
+
+@mixin realSocial {
+    .socialMedia {
+        list-style: none;
+        margin: 0;
+        margin-top: 2rem;
+        li {
+            display: inline-block;
+            &:nth-child(2) {
+                margin-left: rem-calc(15);
+            }
+            a {
+                font-size: rem-calc(25);
+                color: black;
+                &:hover {
+                    color: #ccf3fe;
+                }
+            }
+        }
+    }
+}
+
+.socialMedia{
+    list-style: none;
+    margin: 0;
+    margin-top: 2rem;
+    li{
+        display: inline-block;
+        &:nth-child(2){
+            margin-left: rem-calc(15);
+        }
+        &:nth-child(3){
+            margin-left: rem-calc(15);
+        }
+        a{
+            font-size: rem-calc(25);
+            color: black;
+            &:hover{
+                color: $mainPrimaryColor;
+            }
+        } 
+    }
+}
+
+.marginAll{
+    margin-bottom: 10rem;
+}
+
+
+
+// For The Pleasing Eyes
+
+body.dark-theme {
+    background: #130319;
+    color: #eee;
+    a {
+        color:#eee;
+    }
+    .Link{
+        color:$mainPrimaryColor;
+    }
+    .menuContainer{
+        background-color:#130319;
+        span{
+            background:#eee!important;
+        }
+    }
+    .overlay{
+        background: #130319;
+    }
+    .menuItems{
+        color:#eee!important;
+    }
+    .mainFooter{
+        background-color: #ff5470;
+       
+    }
+}
+
+
+
+
+
+
+
+//@include
+
+body #magicMouseCursor {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    transition: transform 0.07s, width 0.3s, height 0.3s;
+    pointer-events: none; }
+    body #magicMouseCursor.cursor-square {
+      border-radius: 0; }
+  
+  body #magicPointer {
+    height: 5px;
+    width: 5px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: background 0.2s, width 0.2s, height 0.2s, box-shadow 0.2s; }
+    body #magicPointer.is-hover {
+      background: red; }
+    body #magicPointer.pointer-blur {
+      height: 50px;
+      width: 50px;
+      background: none;
+      border: 1px solid #fff;
+      box-shadow: 0px 0px 15px -5px white; }
+    body #magicPointer.pointer-overlay {
+      height: 50px;
+      width: 50px;
+      mix-blend-mode: difference;
+      box-shadow: 0px 0px 15px -5px white; }
+  
+  body .magic-hover {
+    transition: all 0.2s; }
+    body .magic-hover:hover {
+      cursor: none; }
+  
